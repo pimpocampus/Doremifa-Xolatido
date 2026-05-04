@@ -21,6 +21,7 @@ The Creative Router sits between the orchestrator and the registry,
 automatically selecting the right engine(s) from a natural-language prompt.
 """
 
+import json
 import logging
 import os
 import re
@@ -514,7 +515,6 @@ class DoremiFaEngine:
 
         if os.path.exists(config_path):
             try:
-                import json
                 with open(config_path) as fh:
                     user_config = json.load(fh)
                 for key, value in user_config.items():

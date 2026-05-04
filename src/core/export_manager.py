@@ -6,7 +6,7 @@ Assembles project tracks and writes the final deliverable.
 import logging
 import os
 import shutil
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 logger = logging.getLogger("doremifa.export_manager")
 
@@ -57,7 +57,7 @@ class ExportManager:
 
         # Prefer the first available track as the source file so that the
         # export at least produces a real file in test / stub scenarios.
-        source_path: str | None = None
+        source_path: Optional[str] = None
         for track in video_tracks + audio_tracks:
             candidate = track.get("path", "")
             if os.path.exists(candidate):
