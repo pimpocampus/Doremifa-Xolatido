@@ -1,0 +1,40 @@
+{
+  "models": {
+    "audio": {
+      "provider": "local",
+      "model_path": "models/audio",
+      "device": "auto"
+    },
+    "video": {
+      "provider": "local",
+      "model_path": "models/video",
+      "device": "auto"
+    }
+  },
+  "output": {
+    "output_dir": "output",
+    "default_format": {
+      "audio": "wav",
+      "video": "mp4"
+    },
+    "quality": {
+      "audio": "standard",
+      "video": "standard"
+    }
+  },
+  "api": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "enable_cors": true
+  },
+  "ui": {
+    "theme": "dark",
+    "language": "en"
+  },
+  "memory": {
+    "path": "creative_memory.json"
+  },
+  "projects": {
+    "dir": "projects"
+  }
+}
